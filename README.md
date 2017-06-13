@@ -1,3 +1,3 @@
 # LearningNG
 Repository of samples while learning AngularJS
-ng-Firsttry is the direct of frist try samples
+ng-FirstTry is the directory of frist try samples
