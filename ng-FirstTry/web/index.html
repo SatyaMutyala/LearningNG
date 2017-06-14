@@ -10,36 +10,14 @@
         <div ng-app="myApp">            
             <div ng-controller="MainController">
                 <div>{{ error }}</div>
+                {{ countdown }}
 
                 <form name="searchUser" ng-submit="search(username)">
                     <input type="search" required placeholder="Username to find" ng-model="username">
                     <input type="submit" value="Search">
-                </form>                
-                <div ng-show="user"> 
-                    <h1>{{ user.name }}</h1> 
-                    <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
-                    <select ng-model="repoSortOrder">
-                        <option value="+name">Name</option>
-                        <option value="-stargazers_count">Stars</option>
-                        <option value="+language">Language</option>
-                    </select>
-                </div>       
-                <table ng-show="user">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Stars</th>
-                            <th>Language</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="repo in repos| orderBy:repoSortOrder">
-                            <td>{{repo.name}}</td>
-                            <td>{{repo.stargazers_count | number}}</td>
-                            <td>{{repo.language}}</td>
-                        </tr>
-                    </tbody>
-                </table>                         
+                </form>   
+                <div ng-include="'userDetails.html'" ng-show="user">
+                </div>                                                     
             </div>            
         </div>
 
