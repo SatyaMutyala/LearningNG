@@ -25,6 +25,7 @@ var MainController = function($scope, $http){
       
     $scope.message = "Hello Angular!";    
     $scope.username = "Angular";
+    $scope.repoSortOrder = "-stargazers_count";
 }
 myApp.controller("MainController", ["$scope","$http", MainController]);
 
